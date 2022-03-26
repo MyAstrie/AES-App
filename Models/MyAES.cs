@@ -24,7 +24,7 @@ namespace AES.Models
             var cryptoStream = new CryptoStream(memoryStream, aes.CreateEncryptor(), CryptoStreamMode.Write);
             var inputBytes = Encoding.UTF8.GetBytes(plainText);
             cryptoStream.Write(inputBytes, 0, inputBytes.Length);
-            cryptoStream.FlushFinalBlock();
+            cryptoStream.Close();
 
             var encrypted = memoryStream.ToArray();
 
@@ -46,7 +46,7 @@ namespace AES.Models
 
             var inputBytes = Convert.FromBase64String(plaintext);
             cryptoStream.Write(inputBytes, 0, inputBytes.Length);
-            cryptoStream.FlushFinalBlock();
+            cryptoStream.Close();
 
             var decrypted = memoryStream.ToArray();
   

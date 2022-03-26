@@ -39,15 +39,15 @@
                 </Grid.RowDefinitions>
 
                 <Label Content="Введите ключ (16 символов):" Margin="40,21,0,0" HorizontalAlignment="Left" Width="180" Height="22" VerticalAlignment="Top"/>
-                <TextBox Grid.Row="0" Text="{Binding EncryptionKeyValue, UpdateSourceTrigger=PropertyChanged}" Margin="39,47,141,2" BorderThickness="1,1,1,1" Cursor="Arrow">
+                <TextBox Grid.Row="0" Text="{Binding EncryptionKeyValue, UpdateSourceTrigger=PropertyChanged}" Margin="39,47,141,2" BorderThickness="1,1,1,1" Cursor="Arrow" TextWrapping="Wrap">
                     <TextBox.InputBindings>
                         <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding GetByteCodeForEncryptionKeyValue}"/>
                     </TextBox.InputBindings>
                 </TextBox>
-                <Button Grid.Row="0" Command="{Binding GenKey}" Content="{Binding GenKeyText}" Cursor="Hand" Margin="0,48,10,1" Height="80.0640856531049" HorizontalAlignment="Right" Width="125" VerticalAlignment="Stretch" />
+                <Button Grid.Row="0" Command="{Binding GenKey}" Content="{Binding GenKeyText}" Cursor="Hand" Margin="315,52,10,6" Height="80.0640856531049" />
 
                 <Label Content="Введите сообщение:" Margin="40,6,0,0" Grid.Row="1" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130"/>
-                <TextBox Text="{Binding PlainText, UpdateSourceTrigger=PropertyChanged}" Margin="40,33,40,5" Background="{x:Null}" BorderThickness="1,1,1,1" Cursor="Arrow" Grid.Row="1">
+                <TextBox Text="{Binding PlainText, UpdateSourceTrigger=PropertyChanged}" Margin="40,33,40,5" Background="{x:Null}" BorderThickness="1,1,1,1" Cursor="Arrow" Grid.Row="1" TextWrapping="Wrap">
                     <TextBox.InputBindings>
                         <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding GetByteCodeForPlainText}"/>
                     </TextBox.InputBindings>
@@ -56,7 +56,7 @@
                 <Button Command="{Binding EncryptCommand}" Content="Шифровать" Margin="140,14,140,11" Grid.Row="2" Cursor="Hand"/>
 
                 <Label Content="Зашифрованное сообщение (Base64):" Margin="40,3,0,0" HorizontalAlignment="Left" Width="220" Grid.Row="3" Height="22" VerticalAlignment="Top"/>
-                <TextBox Text="{Binding EncryptedText}" IsReadOnly="True" Margin="40,30,40,40" BorderBrush="Transparent" Cursor="Arrow" Grid.Row="3">
+                <TextBox Text="{Binding EncryptedText}" IsReadOnly="True" Margin="40,30,40,40" BorderBrush="Transparent" Cursor="Arrow" Grid.Row="3" TextWrapping="Wrap">
                     <TextBox.InputBindings>
                         <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding GetByteCodeForEncryptedText}"/>
                     </TextBox.InputBindings>
@@ -72,14 +72,14 @@
                 </Grid.RowDefinitions>
 
                 <Label Content="Введите ключ (16 символов):" Margin="40,21,0,0" HorizontalAlignment="Left" Width="180" Height="22" VerticalAlignment="Top"/>
-                <TextBox Grid.Row="0" Text="{Binding DecryptionKeyValue, UpdateSourceTrigger=PropertyChanged}" Margin="40,48,40,1" BorderThickness="1,1,1,1" Cursor="Arrow">
+                <TextBox Grid.Row="0" Text="{Binding DecryptionKeyValue, UpdateSourceTrigger=PropertyChanged}" Margin="40,48,40,1" BorderThickness="1,1,1,1" Cursor="Arrow" TextWrapping="Wrap">
                     <TextBox.InputBindings>
                         <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding GetByteCodeForDecryptionKeyValue}"/>
                     </TextBox.InputBindings>
                 </TextBox>
 
                 <Label Content="Введите зашифрованное сообщение:" Margin="40,6,0,0" Grid.Row="1" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="220"/>
-                <TextBox Text="{Binding PlainKey, UpdateSourceTrigger=PropertyChanged}" Margin="40,33,40,5" Background="{x:Null}" BorderThickness="1,1,1,1" Cursor="Arrow" Grid.Row="1">
+                <TextBox Text="{Binding PlainKey, UpdateSourceTrigger=PropertyChanged}" Margin="40,33,40,5" Background="{x:Null}" BorderThickness="1,1,1,1" Cursor="Arrow" Grid.Row="1" TextWrapping="Wrap">
                     <TextBox.InputBindings>
                         <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding GetByteCodeForPlainKey}"/>
                     </TextBox.InputBindings>
@@ -88,7 +88,7 @@
                 <Button Command="{Binding DecryptCommand}" Content="Дешифровать" Margin="140,14,140,11" Grid.Row="2" Cursor="Hand"/>
 
                 <Label Content="Дешифрованное сообщение (Base64):" Margin="40,3,0,0" HorizontalAlignment="Left" Width="235" Grid.Row="3" Height="22" VerticalAlignment="Top"/>
-                <TextBox Text="{Binding DecryptedText}" IsReadOnly="True" Margin="40,30,40,40" BorderBrush="Transparent" Cursor="Arrow" Grid.Row="3">
+                <TextBox Text="{Binding DecryptedText}" IsReadOnly="True" Margin="40,30,40,40" BorderBrush="Transparent" Cursor="Arrow" Grid.Row="3" TextWrapping="Wrap">
                     <TextBox.InputBindings>
                         <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding GetByteCodeForDecryptedText}"/>
                     </TextBox.InputBindings>
