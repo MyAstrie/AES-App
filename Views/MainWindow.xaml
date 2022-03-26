@@ -44,7 +44,7 @@
                         <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding GetByteCodeForEncryptionKeyValue}"/>
                     </TextBox.InputBindings>
                 </TextBox>
-                <Button Grid.Row="0" Command="{Binding GenKey}" Content="{Binding GenKeyText}" Cursor="Hand" Margin="315,52,10,6" Height="80.0640856531049" />
+                <Button Grid.Row="0" Command="{Binding GenKey}" Content="{Binding GenKeyText}" Cursor="Hand" Margin="0,52,10,6" Height="80.0640856531049" HorizontalAlignment="Right" Width="125" />
 
                 <Label Content="Введите сообщение:" Margin="40,6,0,0" Grid.Row="1" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="130"/>
                 <TextBox Text="{Binding PlainText, UpdateSourceTrigger=PropertyChanged}" Margin="40,33,40,5" Background="{x:Null}" BorderThickness="1,1,1,1" Cursor="Arrow" Grid.Row="1" TextWrapping="Wrap">
@@ -98,7 +98,7 @@
 
         <Grid Row="1">
             <Label Content="Посмотреть байт код поля (двойное нажатие по интересующему полю):" Margin="40,12,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="458"/>
-            <TextBox Text="{Binding ByteCode}" IsReadOnly="True" Margin="40,39,40,39" BorderBrush="Transparent" Cursor="Arrow"/>
+            <TextBox Text="{Binding ByteCode}" IsReadOnly="True" Margin="40,39,40,39" BorderBrush="Transparent" Cursor="Arrow" TextWrapping="Wrap"/>
         </Grid>
     </Grid>
 </Window>

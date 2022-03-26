@@ -46,7 +46,7 @@ namespace AES.Models
 
             var inputBytes = Convert.FromBase64String(plaintext);
             cryptoStream.Write(inputBytes, 0, inputBytes.Length);
-            cryptoStream.Close();
+            cryptoStream.FlushFinalBlockAsync();
 
             var decrypted = memoryStream.ToArray();
   
